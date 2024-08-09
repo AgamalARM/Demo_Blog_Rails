@@ -1,2 +1,14 @@
 <h1 class="title">Blog index page</h1>
-<%= @posts%>
+<% @posts.each do |post|%>
+   <div> 
+   title: <%= link_to  post.title, post%>
+    </div>
+    <div>
+  Body:  <%= post.body%>
+    </div>
+    <div>
+    comment count:<%# comment count%>
+    </div>
+    <hr>
+  
+ <% end %>
