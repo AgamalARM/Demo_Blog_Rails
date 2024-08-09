@@ -1,5 +1,8 @@
-<h1>show this post</h1>
-<%= @post.title%><br>
-<%= @post.body%><br>
+<% content_for :page_title, @post.title %>
+<section class="section">
+    <div class="content">
+        <%= @post.body%>
+    </div>
+</section>
 <strong>Action</strong>
 <%= link_to "Edit", edit_post_path(@post) %>
